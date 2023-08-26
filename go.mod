@@ -1,6 +1,6 @@
-module itsb
+module github.com/itsyndicate/itsb
 
-go 1.17
+go 1.21.0
 
 require (
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
