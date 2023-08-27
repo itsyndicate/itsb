@@ -1,0 +1,13 @@
+---
+jobs:
+- id: "first_backup"
+  provider: aws.rds.backup
+  spec:
+    rds_arn: "someArn"
+    connection_string: "someConnectionString"
+- id: "second_backup"
+  provider: local
+  spec: 
+    path: "somePath"
+    extension: "tar"
+
