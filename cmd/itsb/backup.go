@@ -8,8 +8,8 @@ import (
 )
 
 var ProvidersMap = map[string]func(confparse.BackupJob){
-	// local: LocalBackup
-	// aws.rds.backup: RdsBackup
+	// "local": LocalBackup
+	// "aws.rds.backup": RdsBackup
 }
 
 var backupCmd = &cobra.Command{
