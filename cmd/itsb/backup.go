@@ -22,9 +22,9 @@ var backupCmd = &cobra.Command{
 		} else if len(args) > 1 {
 			log.Fatalln("ERROR: Undefined extra argument(s)")
 		} else {
-			var jobs Jobs
+			// var jobs Jobs
 			fmt.Printf("CONFIG path is: %s", args[0]) // will be removed
-			jobs = confparse.ParseConfig(args[0])
+			// jobs = confparse.ParseConfig(args[0])
 		}
 
 	},
