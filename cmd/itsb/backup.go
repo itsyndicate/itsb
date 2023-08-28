@@ -7,6 +7,11 @@ import (
 	"log"
 )
 
+var ProvidersMap = map[string]func(confparse.BackupJob){
+	// local: LocalBackup
+	// aws.rds.backup: RdsBackup
+}
+
 var backupCmd = &cobra.Command{
 	Use:   "backup CONFIG",
 	Short: "run backup from CONFIG file",
