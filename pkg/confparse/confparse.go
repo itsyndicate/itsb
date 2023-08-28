@@ -27,10 +27,26 @@ type Jobs struct {
 	Jobs []BackupJob `yaml:"jobs"`
 }
 
+func ParseConfig(configPath string) Jobs {
+	var jobs Jobs
+
+	f, err := os.ReadFile(configPath)
+
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	if err := yaml.Unmarshal(f, &jobs); err != nil {
+		log.Fatalln(err)
+	}
+
+	return jobs
+}
+
 func StructTest() {
 	f, err := os.ReadFile("examples/config.yaml")
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 
 	var jobs Jobs
