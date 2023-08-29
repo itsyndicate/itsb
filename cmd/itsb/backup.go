@@ -3,13 +3,14 @@ package itsb
 import (
 	"fmt"
 	"github.com/itsyndicate/itsb/pkg/confparse"
+	"github.com/itsyndicate/itsb/pkg/provider"
 	"github.com/spf13/cobra"
 	"log"
 )
 
 var ProvidersMap = map[string]func(confparse.BackupJob){
-	// "local": LocalBackup
-	// "aws.rds.backup": RdsBackup
+	// "local": provider.LocalBackup
+	// "aws.rds.backup": provider.RdsBackup
 }
 
 var backupCmd = &cobra.Command{
